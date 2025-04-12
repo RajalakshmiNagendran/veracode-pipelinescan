@@ -16,10 +16,12 @@ steps:
     testResultsFiles: '**/surefire-reports/TEST-*.xml'
     javaHomeOption: 'Path'
     jdkDirectory: '/usr/bin/java'
-    mavenVersionOption: 'Default'
+    mavenVersionOption: 'Path'
+    mavenDirectory: '/usr/bin/mvn'
+    mavenSetM2Home: true
     mavenOptions: '-Xmx3072m'
-    mavenAuthenticateFeed: false
-    effectivePomSkip: false
+    mavenAuthenticateFeed: true
+    effectivePomSkip: true
     sonarQubeRunAnalysis: false
 - task: Bash@3
   displayName: Veracode Pipeline
